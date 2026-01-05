@@ -1,0 +1,75 @@
+# Credentials and sensitive files
+config/gcp-credentials.json
+config/*.json
+*.env
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/*.log
+*.log
+
+# Data files
+data/processed/*
+data/archive/*
+!data/processed/.gitkeep
+!data/archive/.gitkeep
+
+# Airflow
+airflow/logs/
+airflow/*.db
+airflow/*.pid
+airflow/*.cfg
+airflow/airflow.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Temporary files
+*.tmp
+*.bak
