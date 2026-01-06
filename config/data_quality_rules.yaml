@@ -1,0 +1,74 @@
+# Data Quality Validation Rules
+
+validation_rules:
+
+  # Completeness checks
+  completeness:
+    - column: "sale_id"
+      required: true
+      max_missing_pct: 0.0
+
+    - column: "sale_datetime"
+      required: true
+      max_missing_pct: 0.0
+
+    - column: "medication_code"
+      required: true
+      max_missing_pct: 0.0
+
+    - column: "sales_quantity"
+      required: true
+      max_missing_pct: 0.5
+
+  # Range checks
+  range:
+    - column: "sales_quantity"
+      min_value: 0
+      max_value: 10000
+
+    - column: "year"
+      min_value: 2014
+      max_value: 2025
+
+    - column: "month"
+      min_value: 1
+      max_value: 12
+
+    - column: "hour"
+      min_value: 0
+      max_value: 23
+
+  # Categorical value checks
+  categorical:
+    - column: "medication_code"
+      allowed_values:
+        - "M01AB"
+        - "M01AE"
+        - "N02BA"
+        - "N02BE"
+        - "N05B"
+        - "N05C"
+        - "R03"
+        - "R06"
+
+    - column: "granularity"
+      allowed_values:
+        - "HOURLY"
+        - "DAILY"
+        - "WEEKLY"
+        - "MONTHLY"
+
+  # Uniqueness checks
+  uniqueness:
+    - columns: ["sale_id"]
+      description: "Sale ID must be unique"
+
+  # Referential integrity (after load)
+  referential_integrity:
+    - foreign_key: "medication_code"
+      references_table: "dim_medication"
+      references_column: "medication_code"
+
+    - foreign_key: "date_key"
+      references_table: "dim_date"
+      references_column: "date_key"
