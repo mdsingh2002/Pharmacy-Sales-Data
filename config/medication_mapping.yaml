@@ -1,0 +1,58 @@
+# Medication ATC Code Mapping
+
+medications:
+  M01AB:
+    category: "Anti-inflammatory and antirheumatic products"
+    type: "Non-steroids"
+    description: "Acetic acid derivatives and related substances"
+    atc_level_1: "M"
+    atc_level_2: "M01"
+
+  M01AE:
+    category: "Anti-inflammatory and antirheumatic products"
+    type: "Non-steroids"
+    description: "Propionic acid derivatives"
+    atc_level_1: "M"
+    atc_level_2: "M01"
+
+  N02BA:
+    category: "Other analgesics and antipyretics"
+    type: "Pain relievers"
+    description: "Salicylic acid and derivatives"
+    atc_level_1: "N"
+    atc_level_2: "N02"
+
+  N02BE:
+    category: "Other analgesics and antipyretics"
+    type: "Pain relievers"
+    description: "Pyrazolones and Anilides"
+    atc_level_1: "N"
+    atc_level_2: "N02"
+
+  N05B:
+    category: "Psycholeptics drugs"
+    type: "Psychiatric"
+    description: "Anxiolytic drugs"
+    atc_level_1: "N"
+    atc_level_2: "N05"
+
+  N05C:
+    category: "Psycholeptics drugs"
+    type: "Psychiatric"
+    description: "Hypnotics and sedatives drugs"
+    atc_level_1: "N"
+    atc_level_2: "N05"
+
+  R03:
+    category: "Drugs for obstructive airway diseases"
+    type: "Respiratory"
+    description: "Obstructive airway disease drugs"
+    atc_level_1: "R"
+    atc_level_2: "R03"
+
+  R06:
+    category: "Antihistamines for systemic use"
+    type: "Allergy"
+    description: "Antihistamines for systemic use"
+    atc_level_1: "R"
+    atc_level_2: "R06"
