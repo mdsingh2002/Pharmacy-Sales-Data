@@ -1,35 +1,35 @@
-# Core ETL dependencies
-pandas==2.1.3
-numpy==1.24.3
-pyyaml==6.0.1
+# Pharmacy Sales ETL Pipeline - All Dependencies
+#
+# For quick setup, install in stages:
+#   1. pip install -r requirements-core.txt  (core ETL - always works)
+#   2. pip install -r requirements-airflow.txt  (optional - for scheduling)
+
+# ===== CORE ETL DEPENDENCIES =====
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+pyyaml>=6.0
 
 # Google Cloud Platform
-google-cloud-bigquery==3.13.0
-google-cloud-storage==2.10.0
-google-auth==2.23.4
-db-dtypes==1.1.1
+google-cloud-bigquery>=3.11.0
+google-cloud-storage>=2.10.0
+google-auth>=2.20.0
+db-dtypes>=1.1.0
 
-# Airflow
-apache-airflow==2.7.3
-apache-airflow-providers-google==10.10.1
-
-# Data validation
-great-expectations==0.18.3
-
-# Logging and monitoring
-python-json-logger==2.0.7
-
-# Testing
-pytest==7.4.3
-pytest-cov==4.1.0
-pytest-mock==3.12.0
-
-# Code quality
-black==23.11.0
-flake8==6.1.0
-pylint==3.0.2
+# Logging
+python-json-logger>=2.0.0
 
 # Utilities
-python-dotenv==1.0.0
-click==8.1.7
-tqdm==4.66.1
+python-dotenv>=1.0.0
+click>=8.1.0
+tqdm>=4.66.0
+
+# ===== AIRFLOW (OPTIONAL - Install separately) =====
+# Uncomment these lines if you want Airflow scheduling:
+# apache-airflow==2.7.3
+# apache-airflow-providers-google==10.10.1
+
+# ===== TESTING (OPTIONAL) =====
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+# pytest-mock>=3.12.0
